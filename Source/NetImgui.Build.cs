@@ -87,6 +87,10 @@ public class NetImgui : ModuleRules
 		// When true, the Dear ImGui demo window will be available in the NetImgui mainmenu bar.
 		// Usefull as a reference on what programmer can do with Dear ImGui
 		bool bDemoImgui_Enabled = true;
+		
+		// When true, the Dear ImGui demo window will be available in the NetImgui mainmenu bar.
+		// Usefull as a reference on what programmer can do with Dear ImGui
+		bool bDemoImPlot_Enabled = true;
 
 		// When true, the demo actor 'ANetImguiDemoActor' will be available to use in your game.
 		// Can be found in 'NetImguiDemoActor.cpp', demonstrating how to use NetImgui in your own project
@@ -172,6 +176,7 @@ public class NetImgui : ModuleRules
 		PublicDefinitions.Add(string.Format("NETIMGUI_WAITCONNECTION_AUTO_ENABLED={0}", bAutoWaitConnection_Enabled ? 1 : 0));
 		PublicDefinitions.Add(string.Format("NETIMGUI_FREETYPE_ENABLED={0}", bFreeType_Enabled ? 1 : 0));
 		PublicDefinitions.Add(string.Format("NETIMGUI_DEMO_IMGUI_ENABLED={0}", bDemoImgui_Enabled ? 1 : 0));
+		PublicDefinitions.Add(string.Format("NETIMGUI_DEMO_IMPLOT_ENABLED={0}", bDemoImPlot_Enabled ? 1 : 0));
 		PublicDefinitions.Add(string.Format("NETIMGUI_DEMO_ACTOR_ENABLED={0}", bDemoActor_Enabled ? 1 : 0));
 		
 		// Fonts support
