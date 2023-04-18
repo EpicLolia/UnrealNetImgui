@@ -13,6 +13,7 @@
 // Additional Header includes
 //=================================================================================================
 #include "../Private/ThirdParty/DearImgui/imgui.h"
+#include "../Private/ThirdParty/DearImgui/implot.h"
 
 // Note1:	Active Icon Fonts can be toggled in 'NetImgui.Build.cs'
 // 
@@ -132,6 +133,7 @@ public:
 			// will use reloaded dll ImGui functions. To prevent issue with destroyed context, we are 
 			// making sure that the original dll knows about this module's newly created context here.
 			ImGui::SetCurrentContext(Get().mpContext);
+			ImPlot::SetCurrentContext(Get().mpImPlotContext);
 			return true;
 		}
 		return false;
@@ -148,6 +150,7 @@ protected:
 	void							Update();
 	FDelegateHandle					mUpdateCallback;
 	struct ImGuiContext*			mpContext = nullptr;
+	struct ImPlotContext*			mpImPlotContext = nullptr;
 #endif //NETIMGUI_ENABLED
 };
 
