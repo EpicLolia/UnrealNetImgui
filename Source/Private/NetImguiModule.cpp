@@ -43,6 +43,8 @@
 	#include "Fonts/FontIPAexMincho/IPAexMincho.cpp"
 #endif
 
+#include "Fonts/ShanHeHeiWei.cpp"
+
 //=================================================================================================
 // Misc
 //=================================================================================================
@@ -417,7 +419,8 @@ void FNetImguiModule::StartupModule()
 	AddFontGroup(TEXT("日本語"),				32.f, IPAexMincho_compressed_data,		IPAexMincho_compressed_size,		true, false, io.Fonts->GetGlyphRangesJapanese());
 #endif
 	// ... add extra fonts here (and add extra matching entries in 'FNetImguiModule::eFont' enum)
-	
+	AddFontGroup(TEXT("山河黑魏"),				16.f, ShanHeHeiWei_compressed_data,		ShanHeHeiWei_compressed_size,		true, true, io.Fonts->GetGlyphRangesChineseFull());
+
 
 	//---------------------------------------------------------------------------------------------
 	// 1. Build the Font, 
