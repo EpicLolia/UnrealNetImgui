@@ -132,12 +132,12 @@ public class NetImgui : ModuleRules
 
 		// Will load the 'Kenney Game Icons' font
 		// Gaming oriented icons
-		bool bFontIconGameKenney_Enabled = true;
+		bool bFontIconGameKenney_Enabled = false;
 		//---------------------------------------------------------------------
 
 		// Will load the 'FontAwesome 6' font ('free' subset)
 		// Contains various icons for every use
-		bool bFontIconAwesome_Enabled = true;
+		bool bFontIconAwesome_Enabled = false;
 		//---------------------------------------------------------------------
 
 		// Will load 'Google Material Designs icons' font
@@ -241,5 +241,7 @@ public class NetImgui : ModuleRules
         }
 
         PrivateDefinitions.Add(string.Format("RUNTIME_LOADER_ENABLED={0}", bEnableRuntimeLoader ? 1 : 0));
+
+        CppStandard = CppStandardVersion.Cpp17;
 	}
 }
