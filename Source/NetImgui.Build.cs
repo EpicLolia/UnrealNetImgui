@@ -108,11 +108,11 @@ public class NetImgui : ModuleRules
 
 		// Will load the 'Kenney Game Icons' font
 		// Gaming oriented icons
-		bool bFontIconGameKenney_Enabled = false;
+		bool bFontIconGameKenney_Enabled = true;
 
 		// Will load the 'FontAwesome 6' font ('free' subset)
 		// Contains various icons for every use
-		bool bFontIconAwesome_Enabled = false;
+		bool bFontIconAwesome_Enabled = true;
 
 		// Will load 'Google Material Designs icons' font
 		// Contains various icons for every use
