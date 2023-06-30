@@ -314,26 +314,6 @@ void FNetImguiModule::Update()
 		#endif
 
 			//----------------------------------------------------------------------------
-			// Display a 'ImPlot Demo' menu entry in MainMenu bar, and the 
-			// demo window itself when requested
-			//----------------------------------------------------------------------------
-		#if NETIMGUI_DEMO_IMPLOT_ENABLED
-			static bool sbShowDemoImplot = false;
-			if (ImGui::BeginMainMenuBar())
-			{
-				if( ImGui::BeginMenu("NetImgui") ){
-					ImGui::MenuItem("Demo: Implot", nullptr, &sbShowDemoImplot);
-					ImGui::EndMenu();
-				}
-				ImGui::EndMainMenuBar();
-			}
-		
-			if( sbShowDemoImplot ){
-				ImPlot::ShowDemoWindow(&sbShowDemoImplot);
-			}
-		#endif
-			
-			//----------------------------------------------------------------------------
 			// Ask all listener to draw their Dear ImGui content
 			//----------------------------------------------------------------------------
 			OnDrawImgui.Broadcast();
