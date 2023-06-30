@@ -94,8 +94,7 @@ public:
 	#if NETIMGUI_FONT_JAPANESE
 		kJapanese32,		// Japanese Mincho font + 'Kenney Game Icons' + 'Font Awesome Icons' or 'Material Design Icons'
 	#endif
-		ShanHeHeiWei,		// Chinese font
-
+		
 		//... Your own font can be added here and loaded in 'FNetImguiModule::StartupModule()' in same order
 		//... Feel free to also add/remove font size for your convenience
 		_Count,
