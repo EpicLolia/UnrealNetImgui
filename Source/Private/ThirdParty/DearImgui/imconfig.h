@@ -21,7 +21,6 @@
 // to know how to export its code, so we are relying on the value provided by Unreal.
 #include <Modules/ModuleManager.h>
 #define IMGUI_API NETIMGUI_API
-#define IMPLOT_API NETIMGUI_API
 //=================================================================================================
 
 #if NETIMGUI_FREETYPE_ENABLED

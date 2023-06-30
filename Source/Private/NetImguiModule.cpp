@@ -396,12 +396,10 @@ void FNetImguiModule::StartupModule()
 #if NETIMGUI_ENABLED
 	NetImgui::Startup();
 	mpContext		= ImGui::CreateContext();
-	mpImPlotContext	= ImPlot::CreateContext();
 	ImGuiIO& io		= ImGui::GetIO();
 	io.ConfigFlags	|= ImGuiConfigFlags_DockingEnable;
 	io.Fonts->Flags |= ImFontAtlasFlags_NoPowerOfTwoHeight;
 	ImGui::SetCurrentContext(mpContext);
-	ImPlot::SetCurrentContext(mpImPlotContext);
 
 	//---------------------------------------------------------------------------------------------
 	// Load our Font 
@@ -481,9 +479,7 @@ void FNetImguiModule::ShutdownModule()
 	NetImgui::Shutdown();
 
 	ImGui::DestroyContext(mpContext);
-	ImPlot::DestroyContext(mpImPlotContext);
 	mpContext = nullptr;
-	mpImPlotContext = nullptr;
 
 #if IMGUI_UNREAL_COMMAND_ENABLED
 	ImUnrealCommand::Destroy(spImUnrealCommandContext);
